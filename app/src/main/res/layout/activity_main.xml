@@ -193,6 +193,46 @@
         android:text="F\nr\no\nm\n\nt\no\np\n\nt\no\n\nb\no\nt\nt\no\nm"
         android:textColor="#fff" />
 
+    <!-- Контейнер растянут между нужными view -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/parentBottomStart"
+        android:layout_below="@id/bottomStart"
+        android:layout_alignStart="@id/bottomStart"
+        android:layout_alignEnd="@id/bottomEnd"
+        android:background="#BABDBF">
 
+        <!-- Внутри FrameLayout-а работает layout_gravity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#2196F3"
+            android:padding="10dp"
+            android:text="Center between 4 views"
+            android:textColor="#fff" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parentTopStart"
+        android:layout_above="@id/fromTopToBottom"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@id/parentTopStart"
+        android:background="#BABDBF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#2196F3"
+            android:padding="10dp"
+            android:text="Top center"
+            android:textColor="#fff" />
+
+</FrameLayout>
 
 </RelativeLayout>
